@@ -1,5 +1,5 @@
 {
-  "geode": "v6.0.0",
+    "geode": "6.0.0",
   "gd": { "android": "2.209" },
   "id": "tobyblox.tobidash-tools",
   "name": "TobiDash Tools",
