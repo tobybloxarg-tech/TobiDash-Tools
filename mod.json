@@ -1,0 +1,16 @@
+{
+  "geode": "v6.0.0",
+  "gd": { "android": "2.209" },
+  "id": "tobyblox.tobidash-tools",
+  "name": "TobiDash Tools",
+  "version": "v0.1.0",
+  "developer": "Tobi / Tobyblox",
+  "description": "Touch-friendly experimental speed, noclip, and icon-unlock toggles for Geometry Dash.",
+  "early-load": true,
+  "settings": {
+    "speedhack": { "type": "bool", "name": "Speed hack", "description": "Apply the selected game-time multiplier while playing. This affects the global scheduler, including animations.", "default": false },
+    "speed-multiplier": { "type": "float", "name": "Speed multiplier", "description": "Used only while Speed hack is enabled. 1.0x is normal speed.", "default": 1.0, "min": 0.5, "max": 2.0, "control": { "slider": true, "slider-step": 0.1, "input": true } },
+    "noclip": { "type": "bool", "name": "Noclip", "description": "Skip player-object collisions while playing. This also bypasses pads, orbs and portals, so turn it off for normal gameplay.", "default": false },
+    "unlock-icons": { "type": "bool", "name": "Unlock icons (visual)", "description": "Makes icon unlock checks return true locally. It does not grant or sync online progress.", "default": false }
+  }
+}
