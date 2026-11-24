@@ -1,0 +1,27 @@
+name: Build Android32 Geode mod
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-android32:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build Geode mod (Android32)
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: v6.0.0
+          target: Android32
+          android-min-sdk: 23
+      - uses: actions/upload-artifact@v7
+        with:
+          name: TobiDash-Tools-Android32
+          path: ${{ steps.build.outputs.build-output }}
+          if-no-files-found: error
